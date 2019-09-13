@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+<head>
+	<title>DETAILS</title>
+	<script src="/static/fade.js"></script>
+	<style>
+		abc{
+			color:"blue";
+		}
+	</style>
+</head>
+<body style="background-color:powderblue">
+<h1 style="color:red;">AMAZON AWS</h1>
+<form class ="frm" action="/cgi-bin/elb2.py" method="POST">
+ <fieldset name="fld">
+  <legend>ENTRY FIELD:</legend>
+  Name of ELB:<br>
+  <input name="a" type="text">
+  <br>
+  <br>
+  Instance Ids:<br>
+  <input name="ins" type="text">
+  <br><br>
+  <button class="add" >Remove More Instances ?</button>
+  <br>
+  <br>
+  <div class="dvv">	
+  </div>
+  <br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+ <fieldset>
+</form> 
+<script>
+    var mx = 5; 
+    var add = $(".add");
+    var x = 0; //initlal text box count
+    $(add).click(function(evt){ //on add input button click
+        evt.preventDefault();
+        if(x < mx){ //max input box allowed
+            x++; //text box increment
+            var p="ins"+x;
+            $(".dvv").append('<div><input type="text" name='+p+' placeholder="i-ref68wuyf97"><button class="rem" >Remove</button><br><br></div>');
+        }
+        
+    })
+	$(".dvv").on("click",".rem",function(e){
+		e.preventDefault();
+		$(this).parent('div').remove();
+		x--;
+	})
+</script>
+</body>
+</html>

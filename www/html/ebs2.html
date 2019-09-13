@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DETAILS</title>
+<script src="/static/fade.js"></script>
+</head>
+<body style="background-color:powderblue">
+<h1 style="color:red;">AMAZON AWS</h1>
+<form action="/cgi-bin/iins1.py" method="POST">
+ <fieldset>
+  <legend>ENTRY FIELD (for attaching the volume to an instance):</legend>
+  Volume ID:<br>
+  <input name="vid" type="text">
+  <br><br>
+  Instance ID:<br>
+   <input name="iid" type="text">
+  <br><br>
+  Name of volume:<br>
+   <input name="nv" type="text">
+  <br><br>
+  <input class="cla" type="checkbox" name="option" value="yes">Increase volume?<br>
+  <input hidden class="inp" type="text" value="size">
+  <input type="submit" value="Submit">
+  <input type="reset">
+ <fieldset>
+</form><br><br>
+<script>
+$(".cla").click(function(){
+$(".inp").fadeToggle(200);
+})
+</script>
+</body>
+</html>

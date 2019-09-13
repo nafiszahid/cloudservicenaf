@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DETAILS</title>
+</head>
+<body style="background-color:powderblue">
+<h1 style="color:red;">AMAZON AWS</h1>
+<form action="/cgi-bin/ins.py" method="POST">
+ <fieldset>
+  <legend>ENTRY FIELD:</legend>
+  Security group:<br>
+  <input name="secg" type="text">
+  <br><br>
+  Name of OS:<br>
+   <select name="os">
+  <option value="a">Amazon Linux AMI 2017.03.0 (HVM)</option>
+  <option value="b">Red Hat Enterprise Linux 7.3 (HVM)</option>
+  <option value="c">Ubuntu Server 16.04 LTS (HVM)</option>
+   </select> 
+  <br><br>
+  Number of instances:<br>
+  <input name="ni" type="number" min="1" max="4">
+  <br><br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+ <fieldset>
+</form> 
+</body>
+</html>
